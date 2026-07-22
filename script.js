@@ -101,6 +101,9 @@ function analyzePassword() {
         document.getElementById("progress");
 
 
+ scoreDisplay.textContent =
+    "Score: " + score + " / 5";
+    
     if (score <= 2) {
 
         strength.textContent =
