@@ -33,10 +33,11 @@
 </button>
 
         <input
-            type="password"
-            id="password"
-            placeholder="Enter your password"
-        >
+    type="password"
+    id="password"
+    placeholder="Enter your password"
+    oninput="analyzePassword()"
+>
 
         <button
             onclick="togglePassword()"
