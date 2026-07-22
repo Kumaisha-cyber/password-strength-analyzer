@@ -124,6 +124,10 @@ function analyzePassword() {
 
         numberCheck.textContent =
             "❌ Contains a number";
+
+        tips.push(
+    "💡 Add at least one number (0-9)"
+);
     }
 
 
@@ -138,6 +142,10 @@ function analyzePassword() {
 
         symbolCheck.textContent =
             "❌ Contains a special character";
+
+        tips.push(
+    "💡 Add a special character (!, @, #, $, %)"
+);
     }
 
 
@@ -156,13 +164,13 @@ function analyzePassword() {
 
     if (score === 5) {
 
-    tip.textContent =
+    tip.innerHTML =
         "🎉 Excellent! Your password meets all requirements";
 
 } else {
 
-    tip.textContent =
-        "💡 Try adding missing requirements to improve your password";
+    tip.innerHTML =
+        tips.join("<br>");
 }
 
 
