@@ -4,7 +4,7 @@ A simple and interactive web application that analyzes password strength based o
 
 ## 🚀 Live Demo
 
-[View Live Website](YOUR_LIVE_WEBSITE_LINK)
+[View Live Website](https://kumaisha-cyber.github.io/password-strength-analyzer/)
 
 ## ✨ Features
 
