@@ -142,3 +142,8 @@ function togglePassword() {
             "password";
     }
 }
+function toggleDarkMode() {
+
+    document.body.classList.toggle("dark-mode");
+
+}
