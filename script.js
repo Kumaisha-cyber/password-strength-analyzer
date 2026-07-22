@@ -148,6 +148,8 @@ function analyzePassword() {
     strength.style.color =
     "green";
 }
+    
+}
 
 
 function togglePassword() {
