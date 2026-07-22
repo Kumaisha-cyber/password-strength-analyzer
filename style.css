@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    text-align: center;
+    margin: 0;
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+#password {
+    width: 90%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.show-btn {
+    background: #555;
+    color: white;
+}
+
+.analyze-btn {
+    background: #2196F3;
+    color: white;
+    width: 90%;
+}
+
+.strength-box {
+    margin: 25px 0;
+}
+
+#strength {
+    font-size: 24px;
+}
+
+.progress-container {
+    width: 90%;
+    height: 15px;
+    background: #ddd;
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    transition: 0.4s;
+}
+
+.checks {
+    text-align: left;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.checks p {
+    font-size: 16px;
+    margin: 12px 0;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    button {
+        width: 90%;
+    }
+}
