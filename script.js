@@ -88,6 +88,10 @@ function analyzePassword() {
 
         uppercaseCheck.textContent =
             "❌ Contains uppercase letter";
+
+        tips.push(
+    "💡 Add an uppercase letter (A-Z)"
+);
     }
 
 
