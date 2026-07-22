@@ -128,6 +128,11 @@ function analyzePassword() {
 
     progress.style.backgroundColor =
         "orange";
+     
+     strength.style.color =
+    "orange";
+
+ }
 
 } else {
 
