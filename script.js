@@ -106,6 +106,10 @@ function analyzePassword() {
 
         lowercaseCheck.textContent =
             "❌ Contains lowercase letter";
+
+        tips.push(
+    "💡 Add a lowercase letter (a-z)"
+);
     }
 
 
