@@ -5,6 +5,8 @@ function analyzePassword() {
 
     let score = 0;
 
+    let tips = [];
+
     const tip =
     document.getElementById("tip");
 
