@@ -177,6 +177,19 @@ function analyzePassword() {
 // Show / Hide Password
 function togglePassword() {
 
+}
+
+  function clearPassword() {
+
+    const passwordBox =
+        document.getElementById("password");
+
+    passwordBox.value = "";
+
+    analyzePassword();
+
+}  
+
     const passwordBox =
         document.getElementById("password");
 
