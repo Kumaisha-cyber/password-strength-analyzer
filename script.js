@@ -5,20 +5,6 @@ function analyzePassword() {
 
     let score = 0;
 
-    if (password.length === 0) {
-
-    document.getElementById("strength").textContent =
-        "Strength: Not Checked";
-
-    document.getElementById("score").textContent =
-        "Score: 0 / 5";
-
-    document.getElementById("progress").style.width =
-        "0%";
-
-    return;
-}
-
     const lengthCheck =
         document.getElementById("length");
 
@@ -35,7 +21,36 @@ function analyzePassword() {
         document.getElementById("symbol");
 
 
-    // Length Check
+    if (password.length === 0) {
+
+        document.getElementById("strength").textContent =
+            "Strength: Not Checked";
+
+        document.getElementById("score").textContent =
+            "Score: 0 / 5";
+
+        document.getElementById("progress").style.width =
+            "0%";
+
+        lengthCheck.textContent =
+            "❌ At least 8 characters";
+
+        uppercaseCheck.textContent =
+            "❌ Contains uppercase letter";
+
+        lowercaseCheck.textContent =
+            "❌ Contains lowercase letter";
+
+        numberCheck.textContent =
+            "❌ Contains a number";
+
+        symbolCheck.textContent =
+            "❌ Contains a special character";
+
+        return;
+    }
+
+
     if (password.length >= 8) {
 
         score++;
@@ -50,7 +65,6 @@ function analyzePassword() {
     }
 
 
-    // Uppercase Check
     if (/[A-Z]/.test(password)) {
 
         score++;
@@ -65,7 +79,6 @@ function analyzePassword() {
     }
 
 
-    // Lowercase Check
     if (/[a-z]/.test(password)) {
 
         score++;
@@ -80,7 +93,6 @@ function analyzePassword() {
     }
 
 
-    // Number Check
     if (/[0-9]/.test(password)) {
 
         score++;
@@ -95,7 +107,6 @@ function analyzePassword() {
     }
 
 
-    // Special Character Check
     if (/[^A-Za-z0-9]/.test(password)) {
 
         score++;
@@ -120,12 +131,10 @@ function analyzePassword() {
         document.getElementById("progress");
 
 
-    // Display Score
     scoreDisplay.textContent =
         "Score: " + score + " / 5";
 
 
-    // Display Strength
     if (score <= 2) {
 
         strength.textContent =
@@ -177,19 +186,6 @@ function analyzePassword() {
 // Show / Hide Password
 function togglePassword() {
 
-}
-
-  function clearPassword() {
-
-    const passwordBox =
-        document.getElementById("password");
-
-    passwordBox.value = "";
-
-    analyzePassword();
-
-}  
-
     const passwordBox =
         document.getElementById("password");
 
@@ -214,6 +210,19 @@ function togglePassword() {
         button.textContent =
             "👁️ Show Password";
     }
+
+}
+
+
+// Clear Password
+function clearPassword() {
+
+    const passwordBox =
+        document.getElementById("password");
+
+    passwordBox.value = "";
+
+    analyzePassword();
 
 }
 
