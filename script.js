@@ -5,6 +5,20 @@ function analyzePassword() {
 
     let score = 0;
 
+    if (password.length === 0) {
+
+    document.getElementById("strength").textContent =
+        "Strength: Not Checked";
+
+    document.getElementById("score").textContent =
+        "Score: 0 / 5";
+
+    document.getElementById("progress").style.width =
+        "0%";
+
+    return;
+}
+
     const lengthCheck =
         document.getElementById("length");
 
