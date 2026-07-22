@@ -175,3 +175,20 @@ button:hover {
 
     color: #856404;
 }
+
+.dark-mode .tips {
+
+    background-color: #333;
+
+    border-left-color: #ffc107;
+}
+
+.dark-mode .tips h3 {
+
+    color: #ffc107;
+}
+
+.dark-mode .tips p {
+
+    color: #f5f5f5;
+}
