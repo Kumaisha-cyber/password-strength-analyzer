@@ -21,6 +21,7 @@ function analyzePassword() {
         document.getElementById("symbol");
 
 
+    // Length Check
     if (password.length >= 8) {
 
         score++;
@@ -35,6 +36,7 @@ function analyzePassword() {
     }
 
 
+    // Uppercase Check
     if (/[A-Z]/.test(password)) {
 
         score++;
@@ -49,6 +51,7 @@ function analyzePassword() {
     }
 
 
+    // Lowercase Check
     if (/[a-z]/.test(password)) {
 
         score++;
@@ -63,6 +66,7 @@ function analyzePassword() {
     }
 
 
+    // Number Check
     if (/[0-9]/.test(password)) {
 
         score++;
@@ -77,6 +81,7 @@ function analyzePassword() {
     }
 
 
+    // Special Character Check
     if (/[^A-Za-z0-9]/.test(password)) {
 
         score++;
@@ -95,63 +100,67 @@ function analyzePassword() {
         document.getElementById("strength");
 
     const scoreDisplay =
-    document.getElementById("score");
+        document.getElementById("score");
 
     const progress =
         document.getElementById("progress");
 
 
- scoreDisplay.textContent =
-    "Score: " + score + " / 5";
-    
- if (score <= 2) {
+    // Display Score
+    scoreDisplay.textContent =
+        "Score: " + score + " / 5";
 
-    strength.textContent =
-        "Strength: Weak";
 
-    progress.style.width =
-        "30%";
+    // Display Strength
+    if (score <= 2) {
 
-    progress.style.backgroundColor =
-        "red";
+        strength.textContent =
+            "Strength: Weak";
 
-  strength.style.color =
-        "red";
+        progress.style.width =
+            "30%";
 
-} else if (score <= 4) {
+        progress.style.backgroundColor =
+            "red";
 
-    strength.textContent =
-        "Strength: Medium";
+        strength.style.color =
+            "red";
 
-    progress.style.width =
-        "65%";
 
-    progress.style.backgroundColor =
-        "orange";
-     
-     strength.style.color =
-    "orange";
+    } else if (score <= 4) {
 
- }
+        strength.textContent =
+            "Strength: Medium";
 
- else {
+        progress.style.width =
+            "65%";
 
-    strength.textContent =
-        "Strength: Strong";
+        progress.style.backgroundColor =
+            "orange";
 
-    progress.style.width =
-        "100%";
+        strength.style.color =
+            "orange";
 
-    progress.style.backgroundColor =
-        "green";
-    
-    strength.style.color =
-    "green";
+
+    } else {
+
+        strength.textContent =
+            "Strength: Strong";
+
+        progress.style.width =
+            "100%";
+
+        progress.style.backgroundColor =
+            "green";
+
+        strength.style.color =
+            "green";
+    }
+
 }
-    
-}
 
 
+// Show / Hide Password
 function togglePassword() {
 
     const passwordBox =
@@ -169,6 +178,7 @@ function togglePassword() {
         button.textContent =
             "🙈 Hide Password";
 
+
     } else {
 
         passwordBox.type =
@@ -177,30 +187,47 @@ function togglePassword() {
         button.textContent =
             "👁️ Show Password";
     }
+
 }
+
+
+// Dark Mode
 function toggleDarkMode() {
 
     document.body.classList.toggle("dark-mode");
 
+
     if (document.body.classList.contains("dark-mode")) {
 
-        localStorage.setItem("darkMode", "enabled");
+        localStorage.setItem(
+            "darkMode",
+            "enabled"
+        );
+
 
     } else {
 
-        localStorage.setItem("darkMode", "disabled");
-
+        localStorage.setItem(
+            "darkMode",
+            "disabled"
+        );
     }
 
 }
 
 
+// Remember Dark Mode
 window.onload = function() {
 
-    if (localStorage.getItem("darkMode") === "enabled") {
+    if (
+        localStorage.getItem("darkMode")
+        ===
+        "enabled"
+    ) {
 
-        document.body.classList.add("dark-mode");
-
+        document.body.classList.add(
+            "dark-mode"
+        );
     }
 
 };
