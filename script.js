@@ -134,7 +134,7 @@ function analyzePassword() {
 
  }
 
-} else {
+ else {
 
     strength.textContent =
         "Strength: Strong";
@@ -144,7 +144,9 @@ function analyzePassword() {
 
     progress.style.backgroundColor =
         "green";
-    }
+    
+    strength.style.color =
+    "green";
 }
 
 
