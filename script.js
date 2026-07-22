@@ -5,6 +5,9 @@ function analyzePassword() {
 
     let score = 0;
 
+    const tip =
+    document.getElementById("tip");
+
     const lengthCheck =
         document.getElementById("length");
 
@@ -22,6 +25,9 @@ function analyzePassword() {
 
 
     if (password.length === 0) {
+
+        tip.textContent =
+    "Enter a password to get security tips";
 
         document.getElementById("strength").textContent =
             "Strength: Not Checked";
@@ -133,6 +139,17 @@ function analyzePassword() {
 
     scoreDisplay.textContent =
         "Score: " + score + " / 5";
+
+    if (score === 5) {
+
+    tip.textContent =
+        "🎉 Excellent! Your password meets all requirements";
+
+} else {
+
+    tip.textContent =
+        "💡 Try adding missing requirements to improve your password";
+}
 
 
     if (score <= 2) {
