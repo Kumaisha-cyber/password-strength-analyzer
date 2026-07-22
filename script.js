@@ -145,16 +145,25 @@ function togglePassword() {
     const passwordBox =
         document.getElementById("password");
 
+    const button =
+        document.querySelector(".show-btn");
+
 
     if (passwordBox.type === "password") {
 
         passwordBox.type =
             "text";
 
+        button.textContent =
+            "🙈 Hide Password";
+
     } else {
 
         passwordBox.type =
             "password";
+
+        button.textContent =
+            "👁️ Show Password";
     }
 }
 function toggleDarkMode() {
