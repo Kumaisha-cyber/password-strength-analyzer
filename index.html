@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Password Strength Analyzer</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🔐 Password Strength Analyzer</h1>
+
+        <p class="subtitle">
+            Check how strong your password is
+        </p>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+        >
+
+        <button
+            onclick="togglePassword()"
+            class="show-btn"
+        >
+            Show / Hide
+        </button>
+
+        <div class="strength-box">
+
+            <h2 id="strength">
+                Strength: Not Checked
+            </h2>
+
+            <div class="progress-container">
+
+                <div
+                    id="progress"
+                    class="progress"
+                ></div>
+
+            </div>
+
+        </div>
+
+        <div class="checks">
+
+            <p id="length">
+                ❌ At least 8 characters
+            </p>
+
+            <p id="uppercase">
+                ❌ Contains uppercase letter
+            </p>
+
+            <p id="lowercase">
+                ❌ Contains lowercase letter
+            </p>
+
+            <p id="number">
+                ❌ Contains a number
+            </p>
+
+            <p id="symbol">
+                ❌ Contains a special character
+            </p>
+
+        </div>
+
+        <button
+            onclick="analyzePassword()"
+            class="analyze-btn"
+        >
+            Analyze Password
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
