@@ -104,29 +104,38 @@ function analyzePassword() {
  scoreDisplay.textContent =
     "Score: " + score + " / 5";
     
-    if (score <= 2) {
+ if (score <= 2) {
 
-        strength.textContent =
-            "Strength: Weak";
+    strength.textContent =
+        "Strength: Weak";
 
-        progress.style.width =
-            "30%";
+    progress.style.width =
+        "30%";
 
-    } else if (score <= 4) {
+    progress.style.backgroundColor =
+        "red";
 
-        strength.textContent =
-            "Strength: Medium";
+} else if (score <= 4) {
 
-        progress.style.width =
-            "65%";
+    strength.textContent =
+        "Strength: Medium";
 
-    } else {
+    progress.style.width =
+        "65%";
 
-        strength.textContent =
-            "Strength: Strong";
+    progress.style.backgroundColor =
+        "orange";
 
-        progress.style.width =
-            "100%";
+} else {
+
+    strength.textContent =
+        "Strength: Strong";
+
+    progress.style.width =
+        "100%";
+
+    progress.style.backgroundColor =
+        "green";
     }
 }
 
