@@ -70,6 +70,10 @@ function analyzePassword() {
 
         lengthCheck.textContent =
             "❌ At least 8 characters";
+
+        tips.push(
+    "💡 Add at least 8 characters"
+);
     }
 
 
