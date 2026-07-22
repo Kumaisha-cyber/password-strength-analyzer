@@ -114,3 +114,35 @@ button:hover {
         width: 90%;
     }
 }
+.dark-btn {
+    background: #222;
+    color: white;
+    width: 90%;
+}
+
+.dark-btn:hover {
+    background: #000;
+}
+
+.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .container {
+    background: #1e1e1e;
+}
+
+.dark-mode #password {
+    background: #333;
+    color: white;
+    border-color: #555;
+}
+
+.dark-mode .subtitle {
+    color: #ccc;
+}
+
+.dark-mode .progress-container {
+    background: #555;
+}
