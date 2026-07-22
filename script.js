@@ -115,6 +115,9 @@ function analyzePassword() {
     progress.style.backgroundColor =
         "red";
 
+  strength.style.color =
+        "red";
+
 } else if (score <= 4) {
 
     strength.textContent =
