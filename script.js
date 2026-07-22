@@ -94,6 +94,9 @@ function analyzePassword() {
     const strength =
         document.getElementById("strength");
 
+    const scoreDisplay =
+    document.getElementById("score");
+
     const progress =
         document.getElementById("progress");
 
